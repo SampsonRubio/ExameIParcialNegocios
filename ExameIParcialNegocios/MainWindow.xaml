@@ -1,0 +1,105 @@
+﻿<Window x:Class="ExameIParcialNegocios.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExameIParcialNegocios"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+            <StackPanel Orientation="Vertical">
+            <Grid Background="HotPink" Height="50" >
+                <TextBlock Text="Camila Sampson - Examen programacion de negocion I Parcial" Foreground="White"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontStretch="Expanded"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                  </Grid.ColumnDefinitions>
+                
+                <StackPanel Orientation="Vertical" Grid.Column="0">
+                    <ListBox Margin="20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Nombre del empleado         " FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="NombreEmple" Width="100" FontSize="15" />
+                        </StackPanel>
+                    </ListBox>
+
+                        <ListBox Margin="20,0,20,20" BorderBrush="White">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="Identidad                              "  FontSize="15" Margin="20,0,20,0"/>
+                                <TextBox x:Name="Identidad" Width="100" FontSize="15"/>
+                            </StackPanel>
+                        </ListBox>
+
+                    <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Horas trabajadas                   "  FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="HorasT" Width="100" FontSize="15"/>
+                        </StackPanel>
+                    </ListBox>
+
+                    <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Pago hora normal de trabajo"  FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="PagoHNT" Width="100" FontSize="15" />
+                        </StackPanel>
+                    </ListBox>
+
+                    <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Horas extras trabajadas         "  FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="HorasET" Width="100" FontSize="15"/>
+                        </StackPanel>
+                    </ListBox>
+
+                    <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Pago hora de trabajo extra    " FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="PagoHET" Width="100" FontSize="15" />
+                        </StackPanel>
+                    </ListBox>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Vertical" Grid.Column="1">
+                    <ListBox Margin="20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Sueldo sin deducciones      " FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="SueldoSinDeducciones" Width="100" FontSize="15" Text="{Binding Path=SSD, Mode=TwoWay}"/>
+                        </StackPanel>
+                    </ListBox>
+                    <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Sueldo + horas extra          " FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="SueldoPorHorasExtra" Width="100" FontSize="15" Text="{Binding Path=SHE, Mode=TwoWay}" />
+                        </StackPanel>
+                    </ListBox>
+
+                    <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="IHSS                                    " FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="IHSS" Width="100" FontSize="15" Text="{Binding Path=ih, Mode=TwoWay}" />
+                        </StackPanel>
+                    </ListBox>
+
+                <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="RAP                                     " FontSize="15" Margin="20,0,20,0"/>
+                            <TextBox x:Name="RAP" Width="100" FontSize="15" Text="{Binding Path=ra, Mode=TwoWay}"/>
+                        </StackPanel>
+                    </ListBox>
+
+                    <ListBox Margin="20,0,20,20" BorderBrush="White">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="Sueldo total del empleado      " FontSize="15" Margin="20,0,0,0"/>
+                            <TextBox x:Name="SueldoTotalDelEmpleado" Width="100" FontSize="15" Text="{Binding Path=thot, Mode=TwoWay}"/>
+                        </StackPanel>
+                    </ListBox>
+                    <Button x:Name="Calcular" Content="Calcular" Width="150" Height="25" Foreground="White" Background="DeepPink" Click="Calcular_Click" BorderBrush="Transparent"/>
+
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
